@@ -1,27 +1,25 @@
 import './app.css';
 import React, {Component} from "react";
-import {MyContext} from "../context/context";
+import {AppContext, defaultParams} from "../context/context";
 import CodeArea from "./codeArea/codeArea";
+import DataArea from "./dataArea/dataArea";
 
 class App extends Component {
 
-    state = {
-        a: 6,
-        incA: () => {
-            this.setState({a: this.state.a + 1})
-        }
-    };
+    constructor(props) {
+        super(props);
+
+        this.state = defaultParams;
+    }
 
     render() {
         return (
-            <MyContext.Provider value={this.state}>
+            <AppContext.Provider value={this.state}>
                 <div className="app full-container">
                     <CodeArea/>
-                    <div className='code'>
-                        code {this.state.a}
-                    </div>
+                    <DataArea/>
                 </div>
-            </MyContext.Provider>
+            </AppContext.Provider>
         );
     }
 

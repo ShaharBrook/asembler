@@ -1,3 +1,9 @@
 import * as React from "react";
 
-export const MyContext = React.createContext(6);
+export const defaultParams = {
+    run: (text) => {
+        console.log(text);
+    }
+};
+
+export const AppContext = React.createContext(defaultParams);
