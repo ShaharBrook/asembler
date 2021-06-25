@@ -1,0 +1,7 @@
+.data-area {
+    display: flex;
+}
+
+.static-memory-container {
+    width: 50%;
+}

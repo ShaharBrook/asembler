@@ -1,7 +1,7 @@
 import './app.css';
 import React, {Component} from "react";
 import {AppContext, defaultParams} from "../context/context";
-import CodeArea from "./codeArea/codeArea";
+import DevelopmentArea from "./codeArea/developmentArea";
 import DataArea from "./dataArea/dataArea";
 
 class App extends Component {
@@ -16,7 +16,7 @@ class App extends Component {
         return (
             <AppContext.Provider value={this.state}>
                 <div className="app full-container">
-                    <CodeArea/>
+                    <DevelopmentArea/>
                     <DataArea/>
                 </div>
             </AppContext.Provider>
