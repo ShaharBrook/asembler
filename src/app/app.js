@@ -9,7 +9,14 @@ class App extends Component {
     constructor(props) {
         super(props);
 
-        this.state = defaultParams;
+        this.state = {
+            ...defaultParams,
+            setRegister: (index, value) => {
+                const newRegisters = this.state.registers.concat();
+                newRegisters[index] = value;
+                this.setState({registers: newRegisters});
+            }
+        };
     }
 
     render() {

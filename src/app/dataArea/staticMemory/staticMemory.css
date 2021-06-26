@@ -1,5 +1,11 @@
 .static-memory {
+    display: flex;
     height: 100%;
     margin: 0;
     padding: 1rem;
+}
+
+.registers-container {
+    display: flex;
+    flex-direction: column;
 }
